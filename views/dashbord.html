@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="logo" onclick="window.location.href = '/'">
+                <img src="/assests/logo.jpg" alt="">
+            </div>
+            <div class="logout">
+                <button id="logout-button">Logout</button>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <section class="user-info">
+                <h2>Welcome, <span id="user-name"></span></h2>
+                <div class="user-details">
+                    <p><strong>Email:</strong> <span id="user-email"></span></p>
+                    <p><strong>Phone:</strong> <span id="user-phone"></span></p>
+                    <p><strong>Role:</strong> <span id="user-role"></span></p>
+                </div>
+            </section>
+            
+            <section class="user-actions">
+                <div class="action-card">
+                    <h3>My Requests</h3>
+                    <p>View or manage your requests</p>
+                    <button id="my-requests-button">View</button>
+                </div>
+
+                <div class="action-card">
+                    <h3>My Appointments</h3>
+                    <p>View or manage your appointments</p>
+                    <button id="my-appointments-button">View</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
