@@ -1,10 +1,19 @@
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    const token = getCookie('token')
+    if(token!= null)
+        window.location.href='/'
     const form = document.getElementById('login-form');
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
     const errorMessages = [];
+
 
     form.addEventListener('submit', function (event) {
         event.preventDefault(); 

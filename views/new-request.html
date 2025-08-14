@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>New Repair Request</title>
+  <link rel="stylesheet" href="/css/new-request.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+
+  
+</head>
+<body>
+      <header>
+        <div class="logo" onclick="window.location.href = '/'">
+            <img src="/assests/logo.jpg" alt="Logo">
+        </div>
+        <nav>
+            <ul id="navbar">
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/appointments">My Appointments</a></li>
+            <li><a href="/requests">My Requests</a></li>
+            <li><a href="/technicians">Find Technicians</a></li>
+
+            <li><a href="/login" id="logout-button">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+  <div class="request-form">
+    <h2>Submit Repair Request</h2>
+    <form id="repairForm">
+      <label for="description">Problem Description *</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+
+      <label for="images">Upload Images</label>
+      <input type="file" id="images" name="images" multiple accept="image/*">
+
+      <label for="location">Location (Address)</label>
+      <input type="text" id="location" name="location" placeholder="Enter your address">
+
+      <label for="service">Service Type (Optional)</label>
+      <select id="service" name="service">
+        <option value="none" selected>Not specified</option>
+        <option value="plumbing">Plumbing</option>
+        <option value="electrical">Electrical</option>
+        <option value="cleaning">Cleaning</option>
+        <option value="carpentry">Carpentry</option>
+      </select>
+
+      <button type="submit">Submit Request</button>
+    </form>
+    <p id="message" class="success-message" style="display: none;"></p>
+    <p id="error" class="error-message" style="display: none;"></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Repair & Service Management. All Rights Reserved.</p>
+</footer>
+
+  <script src="/js/new-request.js"></script>
+</body>
+</html>

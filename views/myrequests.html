@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Requests</title>
+
+    <link rel="stylesheet" href="/css/myrequests.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+</head>
+<body>
+
+    <header>
+
+        <nav>
+            <ul id="navbar">
+                <li><a href="/login" id="logout-button">Logout</a></li>
+                <li><a href="/appointments">My Appointments</a></li>
+                <li><a href="/technicians">Find Technicians</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+           
+            </ul>
+        </nav>
+        <div class="logo" onclick="window.location.href = '/'">
+            <img src="/assests/logo.jpg" alt="Logo">
+        </div>
+       
+    </header>
+      <br><br><br><br>
+    <main>
+        <section id="requests-container" class="requests-container">
+            <p class="loading">Loading...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Repair & Service Management. All Rights Reserved.</p>
+    </footer>
+    
+
+    <script src="/js/myrequests.js"></script>
+</body>
+</html>

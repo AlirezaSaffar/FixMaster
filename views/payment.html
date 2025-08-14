@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<form class="payment-box mx-auto p-4 rounded" style="max-width: 400px; background: #f9f9f9;">
+  <h3 class="text-center text-danger mb-4">
+    <img src="/assests/melat.jpg" alt="Bank Mellat" style="height:24px; vertical-align: middle;">
+    ملت پرداخت 
+  </h3>
+  <h3>مبلغ قابل پرداخت: <span id="payment-amount"></span></h3>
+
+  <div class="form-group">
+    <label>شماره کارت</label>
+    <input type="text" class="form-control" placeholder="xxxx-xxxx-xxxx-xxxx" maxlength="19">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-7">
+      <label>تاریخ انقضا</label>
+      <input type="text" class="form-control" placeholder="MM/YY" maxlength="5">
+    </div>
+    <div class="form-group col-5">
+      <label>CVV</label>
+      <input type="password" class="form-control" placeholder="3 digit">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label>رمز دوم (پویا)</label>
+    <input type="password" class="form-control" placeholder="رمز دوم کارت" maxlength="12" required>
+  </div>
+  
+  <button type="submit" id="pay-button" class="btn btn-danger btn-block">پرداخت</button>
+</form>
+
+<script src="/js/payment.js"></script>

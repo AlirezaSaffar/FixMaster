@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Technicians</title>
+    <link rel="stylesheet" href="/css/find-technicians.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo" onclick="window.location.href = '/'">
+            <img src="/assests/logo.jpg" alt="Logo">
+        </div>
+        <nav>
+            <ul id="navbar">
+                <!-- Dynamic navbar -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Title -->
+        <section class="page-title">
+            <h1>Find the Best Technicians</h1>
+            <p>Filter by city and service type to find the right expert for you.</p>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filters">
+            <input type="text" id="city-filter" placeholder="Enter city">
+            <select id="service-filter">
+                <option value="">Select Service</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="electrical">Electrical</option>
+                <option value="cleaning">Cleaning</option>
+                <option value="carpentry">Carpentry</option>
+            </select>
+            <button id="apply-filters" class="btn">Search</button>
+        </section>
+
+        <!-- Technicians List -->
+        <section class="technicians-list" id="technicians-list">
+            <!-- Cards will be injected dynamically -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Repair & Service Management. All Rights Reserved.</p>
+    </footer>
+
+    <script src="/js/find-technician.js"></script>
+</body>
+</html>

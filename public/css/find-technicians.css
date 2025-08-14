@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header copied from index.css for consistency */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #4CAF50;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.logo img:hover {
+    transform: scale(1.1);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #fff8f0;
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    padding: 50px 20px 20px;
+}
+.page-title h1 {
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+.page-title p {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.filters input, .filters select {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    min-width: 200px;
+    background: white;
+}
+.btn {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #388e3c;
+}
+
+/* Technicians Grid */
+.technicians-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+.technician-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.4s ease;
+}
+.technician-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+.technician-card h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+.technician-card p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Footer same as index */
+footer {
+    
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background-color 0.5s ease;
+
+}
+
+
+header nav a:hover {
+    transition: background-color 1s ease;
+    background-color: rgba(255,255,255,0.2);
+}

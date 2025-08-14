@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
 
     const token = getCookie('token');
+    const role = getCookie('role');
     
     if (!token) {
          window.location.href = '/login'; 
@@ -44,6 +45,21 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('user-email').innerText = user.email;
             document.getElementById('user-phone').innerText = user.phone;
             document.getElementById('user-role').innerText = user.role === 'technician' ? 'Technician' : 'Customer';
+            document.getElementById('user-rate').innerText =user.avgRating + "⭐"
+
+            if(role==='technician'){
+                
+            document.getElementById('user-city').innerText = user.city;
+            document.getElementById('user-service').innerText = user.service;
+            document.getElementById('serv').style.display= 'block'
+            document.getElementById('city').style.display= 'block'
+            document.getElementById('rate').style.display= 'block'
+
+
+            }else{
+document.getElementById('action-card').style.display= 'block'
+                
+            }
         } else {
             alert('Error loading user data');
         }
@@ -55,6 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.getElementById('logout-button').addEventListener('click', () => {
         document.cookie = 'token=; Max-Age=0; path=/'; 
-        window.location.href = '/login.html'; 
+        document.cookie = 'role=; Max-Age=0; path=/'; 
+        window.location.href = '/login';
+    });
+    document.getElementById('my-requests-button').addEventListener('click', () => {
+        window.location.href = '/requests';
+    });
+    document.getElementById('my-appointments-button').addEventListener('click', () => {
+        window.location.href = '/appointments';
     });
 });

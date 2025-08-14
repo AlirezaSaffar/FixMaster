@@ -1,0 +1,168 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    margin: 0;
+    color: #333;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 70px;
+    margin-top: 10px;
+
+}
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+.request-info {
+    margin-bottom: 30px;
+}
+.request-info h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+.request-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.request-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.request-images img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+.offers-list {
+    margin-top: 30px;
+}
+.offer-card {
+    background: #f5f7fa;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.2s ease;
+}
+.offer-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.offer-info {
+    display: flex;
+    flex-direction: column;
+}
+.offer-info span {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+.offer-info .price {
+    font-weight: bold;
+    color: #27ae60;
+}
+.offer-info .message {
+    font-style: italic;
+    color: #555;
+}
+.offer-card button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.offer-card button:hover {
+    background-color: #1f618d;
+}
+.loading {
+    text-align: center;
+    font-style: italic;
+    color: #95a5a6;
+    margin-top: 40px;
+}
+
+
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+   
+  }
+
+  footer {
+    
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+  header {
+    background-color: #2e7d32;
+    padding: 12px 30px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    z-index: 1000; 
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar ul li a:hover {
+    color: #c8e6c9;
+  }
+
+  .technician-link {
+    color: #3498db;       
+    text-decoration: none;  
+    font-weight: 600;       
+    transition: color 0.3s;
+   }
+.technician-link:hover {
+    color: #2c3e50;      
+    text-decoration: underline; 
+}

@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    const token = getCookie('token')
+    if(token!= null)
+        window.location.href='/'
     const form = document.getElementById('signup-form');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
@@ -7,6 +16,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const confirmPasswordInput = document.getElementById('confirm-password');
     const roleSelect = document.getElementById('role');
     const errorMessages = [];
+
+const cityGroup = document.getElementById('city-group');
+const serviceGroup = document.getElementById('service-group');
+
+roleSelect.addEventListener('change', () => {
+    if (roleSelect.value === 'technician') {
+        cityGroup.style.display = 'block';
+        serviceGroup.style.display = 'block';
+        document.getElementById('city').required = true;
+        document.getElementById('service').required = true;
+    } else {
+        cityGroup.style.display = 'none';
+        serviceGroup.style.display = 'none';
+        document.getElementById('city').required = false;
+        document.getElementById('service').required = false;
+    }
+});
+
+
+
 
     form.addEventListener('submit', function (event) {
         event.preventDefault(); 
@@ -38,19 +67,38 @@ document.addEventListener('DOMContentLoaded', function () {
         if (roleSelect.value === '') {
             errorMessages.push('Please select a role (Customer or Technician)');
         }
+        const cityInput = document.getElementById('city');
+const serviceSelect = document.getElementById('service');
+
+if (roleSelect.value === 'technician') {
+    if (cityInput.value === '') {
+        errorMessages.push('City is required for technicians');
+    }
+    if (serviceSelect.value === '') {
+        errorMessages.push('Please select a service type');
+    }
+}
+
 
         if (errorMessages.length > 0) {
             alert(errorMessages.join('\n'));
             return;
         }
-
+        var serv= serviceSelect.value
+        if(roleSelect.value === 'customer'){
+serv = 'none'
+        }
         const formData = {
             name: nameInput.value,
             email: emailInput.value,
             phone: phoneInput.value,
             password: passwordInput.value,
             role: roleSelect.value,
+            city: cityInput.value,
+            service: serv
+
         };
+    
 
         fetch('/api/auth/signup', {
             method: 'POST',
@@ -63,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             if (data.success) {
                 alert('Signup successful! Redirecting...');
-                window.location.href = '/login.html';
+                window.location.href = '/login';
             } else {
                 alert('Error: ' + data.message);
             }

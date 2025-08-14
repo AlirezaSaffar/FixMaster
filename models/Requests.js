@@ -4,17 +4,25 @@ const { Schema } = mongoose;
 const requestSchema = new Schema({
   customer: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   description: { type: String, required: true },
-  images: [String], // URLs of the uploaded images
-  location: { 
-    lat: { type: Number, required: true },
-    long: { type: Number, required: true },
+  images: [String], 
+  location: String,  
+  service: { 
+    type: String, 
+    enum: ['plumbing', 'electrical', 'cleaning', 'carpentry', 'none'], 
+    default: 'none' 
   },
   status: { 
     type: String, 
-    enum: ['pending', 'under_review', 'in_progress', 'completed'], 
+    enum: ['pending', 'completed'], 
     default: 'pending' 
   },
-  technician: { type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null }, // Technician assigned to the task
+  offers: [{
+    technician: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    price: { type: Number, required: true },
+    message: String,
+    createdAt: { type: Date, default: Date.now }
+  }],
+  acceptedTechnician: { type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
 });

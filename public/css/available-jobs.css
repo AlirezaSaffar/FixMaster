@@ -1,0 +1,305 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .request-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .request-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .request-meta {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .request-images img {
+    max-width: 300px;
+    max-height: 300px;
+    margin-right: 8px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  .offer-section {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .offer-section input[type="number"] {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .offer-section button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .offer-section button:hover {
+    background-color: #0056b3;
+  }
+  
+  .message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+  }
+  .error {
+    color: red;
+  }
+  
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+
+  header {
+    background-color: #2e7d32;
+    padding: 12px 30px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    z-index: 1000; 
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar ul li a:hover {
+    color: #c8e6c9;
+  }
+
+
+  /* requests.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafb;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.request-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: box-shadow 0.25s ease;
+}
+
+.request-card:hover {
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.15);
+}
+
+.request-title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #34495e;
+  margin-bottom: 8px;
+}
+
+.request-meta {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 12px;
+}
+
+.request-description {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.request-images {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.request-images img {
+  width: 300px !important;
+  height: 300px !important;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.offer-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.offer-container input[type="number"] {
+  width: 100px;
+  padding: 8px 12px;
+  border: 1.5px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.offer-container input[type="number"]:focus {
+  outline: none;
+  border-color: #2980b9;
+  box-shadow: 0 0 6px #2980b9aa;
+}
+
+.offer-container button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.offer-container button:hover {
+  background-color: #1f618d;
+}
+
+.loading {
+  text-align: center;
+  font-style: italic;
+  color: #95a5a6;
+  margin-top: 40px;
+}
+
+.offer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.offer-container input[type="number"] {
+  width: 200px;
+  padding: 8px 12px;
+  border: 1.5px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.offer-container textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #d0d7de;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 100px;
+  background-color: #fafbfc;
+  transition: all 0.25s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.offer-container textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  background-color: #ffffff;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.4);
+}
+
+.offer-container textarea:focus,
+.offer-container input[type="number"]:focus {
+  outline: none;
+  border-color: #2980b9;
+  box-shadow: 0 0 6px #2980b9aa;
+}
+#timeEstimate {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #2c3e50;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+#timeEstimate:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  outline: none;
+}

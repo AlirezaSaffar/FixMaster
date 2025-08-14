@@ -189,6 +189,7 @@ body {
 .logo {
     display: flex;
     align-items: center;
+    
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -200,11 +201,14 @@ body {
 .logo img {
     width: 150px; /* اندازه تصویر */
     height: auto;
+
     border-radius: 10px; /* گوشه‌های گرد برای تصویر */
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
     transition: all 0.3s ease; /* انتقال نرم برای تغییرات */
 }
 
 .logo img:hover {
     opacity: 0.8; /* کمی شفاف‌تر شدن تصویر هنگام هاور */
-    transform: rotate(2deg); /* چرخش جزئی برای تصویر هنگام هاور */
 }

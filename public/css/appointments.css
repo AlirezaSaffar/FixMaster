@@ -1,0 +1,286 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  h2 {
+    color: #343a40;
+    font-weight: bold;
+  }
+  
+  .list-group-item {
+    padding: 15px 20px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: box-shadow 0.2s;
+  }
+  
+  .list-group-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .complete-btn {
+    margin-top: 10px;
+  }
+  
+  .modal-title {
+    font-weight: bold;
+  }
+  
+   a {
+    text-decoration: none;
+}
+
+ a:hover {
+    text-decoration: none;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+   
+
+ 
+nav {
+    height: 25.59px;
+}
+
+
+/* Container */
+#appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* فاصله بین کارت‌ها */
+}
+
+/* Card */
+.appointment-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.appointment-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Card Info */
+.appointment-info h5 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.appointment-info p {
+    margin: 2px 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Status badge */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.status-scheduled {
+    background-color: #007bff;
+}
+
+.status-completed {
+    background-color: #28a745;
+}
+
+/* Complete button */
+.complete-btn {
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.btn-complete {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-complete:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.btn-complete:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Style for the appointment card paragraphs */
+.appointment-card p {
+    margin: 0.3rem 0;           /* فاصله بین خطوط */
+    color: #333;                /* رنگ متن خاکستری تیره */
+    font-size: 0.95rem;         /* اندازه فونت کمی کوچکتر */
+    line-height: 1.4;           /* فاصله بین خطوط */
+}
+
+/* Highlight the labels like "Date", "Description", "Location" */
+.appointment-card p::before {
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    color: #555;
+}
+
+/* اگر نمیخوای از data-label استفاده کنی، می‌تونی کلاس اضافه کنی */
+.appointment-card .appointment-info p {
+    font-weight: 500;
+    color: #444;
+}
+
+/* برای حالت status */
+.status-badge {
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    color: white;
+    text-transform: capitalize;
+    font-size: 0.85rem;
+}
+
+.status-scheduled {
+    background-color: #f0ad4e; /* نارنجی */
+}
+
+.status-completed {
+    background-color: #5cb85c; /* سبز */
+}
+
+
+#feedbackModal .modal-content {
+    border-radius: 12px;
+    padding: 10px;
+}
+
+#feedbackModal .modal-header {
+    border-bottom: none;
+    font-size: 1.2rem;
+}
+
+#feedbackModal .modal-body textarea {
+    font-size: 1rem;
+    resize: none;
+}
+
+#feedbackModal .modal-footer {
+    border-top: none;
+}
+
+#feedbackModal .btn-success {
+    background: linear-gradient(135deg, #28a745, #218838);
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#feedbackModal .btn-success:hover {
+    background: linear-gradient(135deg, #218838, #28a745);
+}
+
+
+.modal-content {
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.modal-content:hover {
+    transform: translateY(-5px);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border-bottom: none;
+    font-size: 1.3rem;
+}
+
+.modal-header .close {
+    font-size: 1.5rem;
+}
+
+textarea {
+    font-size: 1rem;
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.rating-stars {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating-stars .star:hover,
+.rating-stars .star.hovered,
+.rating-stars .star.selected {
+    color: #f39c12;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #28a745, #218838);
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #218838, #28a745);
+}
+
+#submit-feedback {
+    background-color: #28a745;  /* سبز */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;      
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* سایه زیبا */
+}
+
+#submit-feedback:hover {
+    background-color: #218838; 
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.25); /* سایه قوی‌تر هنگام هاور */
+}

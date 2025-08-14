@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request Detail</title>
+
+
+<link rel="stylesheet" href="/css/request-detail.css">
+<link rel="stylesheet" href="/css/index.css" />
+</head>
+<body>
+<div class="container">
+
+
+
+    <header>
+        <div class="logo" onclick="window.location.href = '/'">
+            <img src="/assests/logo.jpg" alt="Logo">
+        </div>
+        <nav>
+            <ul id="navbar">
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/appointments">My Appointments</a></li>
+
+                <li><a href="/requests">My Requests</a></li>
+                <li><a href="/technicians">Find Technicians</a></li>
+
+                <li><a href="/login" id="logout-button">Logout</a></li>
+           
+            </ul>
+        </nav>
+        
+       
+    </header>
+
+     <br><br><br><br>
+
+
+    <h1>Request Detail</h1>
+
+    <div id="request-container" class="request-info">
+        <h2 id="request-title">Loading...</h2>
+        <p id="request-description"></p>
+        <div class="request-images" id="request-images"></div>
+    </div>
+
+    <div class="offers-list">
+        <h3 id="h3offer">Offers from Technicians</h3>
+        <div id="offers-container">
+            <p class="loading">Loading offers...</p>
+        </div>
+    </div>
+
+
+
+   
+</div>
+
+<footer>
+    <p>&copy; 2025 Repair & Service Management. All Rights Reserved.</p>
+</footer>
+
+<script src="/js/request-detail.js"></script>
+</body>
+</html>

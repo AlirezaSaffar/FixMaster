@@ -3,11 +3,12 @@ const { Schema } = mongoose;
 
 const appointmentSchema = new Schema({
   request: { type: mongoose.Schema.Types.ObjectId, ref: 'Request', required: true },
-  technician: { type: mongoose.Schema.Types.ObjectId, ref: 'Technician', required: true },
+  customer:  { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  technician: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   appointmentTime: { type: Date, required: true },
   status: { 
     type: String, 
-    enum: ['scheduled', 'in_progress', 'completed', 'cancelled'], 
+    enum: ['scheduled', 'completed'], 
     default: 'scheduled' 
   },
   createdAt: { type: Date, default: Date.now },
