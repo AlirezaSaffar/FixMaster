@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/* General */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f5f5f5;
@@ -413,5 +412,28 @@ header nav a:hover {
 
     .testimonial-card {
         max-width: 90%;
+    }
+}
+
+@media (max-width: 610px) {
+    header {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
     }
 }

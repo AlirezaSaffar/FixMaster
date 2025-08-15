@@ -131,7 +131,6 @@ class authController {
 }
 
 static getTechnicianProfile = async (req, res) => {
-    console.log(req.params)
     try {
       const technicianId = req.params.id;
   

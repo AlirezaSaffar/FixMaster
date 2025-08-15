@@ -1,3 +1,4 @@
+const { bool } = require('joi');
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
@@ -22,9 +23,10 @@ const requestSchema = new Schema({
     message: String,
     createdAt: { type: Date, default: Date.now }
   }],
-  acceptedTechnician: { type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
+  warranty :{type:Boolean},
+
 });
 
 const Request = mongoose.model('Request', requestSchema);

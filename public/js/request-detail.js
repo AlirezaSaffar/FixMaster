@@ -31,6 +31,13 @@ async function loadRequestDetail() {
 
         document.getElementById('request-title').textContent = requestData.title;
         document.getElementById('request-description').textContent = requestData.description;
+        if(requestData.warranty){
+        document.getElementById('warr').textContent = "this request is under warranty";
+        }else{
+
+
+        }
+
 
         const imagesContainer = document.getElementById('request-images');
         imagesContainer.innerHTML = '';
@@ -72,14 +79,22 @@ async function loadRequestDetail() {
 const iranOffset = 0;
 const iranTime = new Date(time.getTime() + iranOffset);
 console.log(iranTime)
+if(offer.best){
+    info.innerHTML = `
+    <span class="technician"><a href="/technician-profile?id=${offer.technicianId}  " class="technician-link"> Technician: ${offer.technicianName} (offered) </a> </span>
+   <span class="price">Price: $${offer.amount}</span>
+    <span class="price">Time: $${iranTime}</span>
+   <span class="message">"${offer.message}"</span>
+`;
 
+}else{
                 info.innerHTML = `
                      <span class="technician"><a href="/technician-profile?id=${offer.technicianId}  " class="technician-link"> Technician: ${offer.technicianName} </a> </span>
                     <span class="price">Price: $${offer.amount}</span>
                      <span class="price">Time: $${iranTime}</span>
                     <span class="message">"${offer.message}"</span>
                 `;
-
+}
                 const button = document.createElement('button');
                 button.textContent = 'Accept Offer';
                 button.onclick = () => acceptOffer(offer);

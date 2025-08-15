@@ -1,0 +1,120 @@
+body {
+  font-family: 'Arial', sans-serif;
+  direction: rtl;
+  background: #f8f8f8;
+  padding: 20px;
+  margin: 0;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #4A90E2;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, #ffffff, #f2f2f2);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.card h2 {
+  font-size: 28px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.price-limit {
+  background: #fff;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.price-limit h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid #007BFF;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+button:active {
+  background: #004494;
+}
+
+/* استایل برای نمودارها */
+.charts {
+  margin-top: 40px;
+  text-align: center;
+  display: flex; /* استفاده از flexbox برای کنار هم قرار دادن نمودارها */
+  justify-content: space-around; /* توزیع مساوی فضای خالی بین نمودارها */
+  gap: 20px; /* فاصله بین نمودارها */
+}
+
+.chart-container {
+  width: 45%; /* تعیین عرض برای هر نمودار */
+  max-width: 600px; /* حداکثر عرض برای نمودار */
+}
+
+canvas {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100% !important; /* تنظیم عرض به طور خودکار */
+  height: auto !important; /* تنظیم ارتفاع به طور خودکار */
+}

@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     const role = getCookie('role');
     if(role==="customer"){
         document.getElementById("req").style.display="block"
+        document.getElementById("calendar").style.display="none"
+    }else{
+        document.getElementById("findtech").style.display="none"
+
     }
     const token = getCookie('token');
 
@@ -47,6 +51,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     
         console.log(appt)
+        var warr=""
+        if(appt.request.warranty){
+            warr= "this request is under warranty"
+        }
         let html = `
             <h5>Request Details</h5>
         <p>Description: ${appt.request.description || '---'}</p>
@@ -55,8 +63,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         <div class="appointment-info">
             <p>Date: ${time}</p>
             <p>Status: <span class="status-badge status-${appt.status}">${appt.status}</span></p>
+            <p>${warr}</p>
         </div>
         `;
+        
 
         if (role === "customer" && appt.status === "scheduled" && !appt.feedbackGiven) {
             html += `<br><button class="btn-complete" data-id="${appt._id}">Mark as Completed</button>`;
@@ -103,6 +113,42 @@ document.addEventListener("DOMContentLoaded", async () => {
             alert(`Error: ${data.message}`);
         }
     });
+
+
+
+    const events = appointments.map(appt => {
+        return {
+            title: appt.request.description || 'No description',
+            start: new Date(appt.appointmentTime).toISOString(),
+            end: new Date(appt.appointmentTime).toISOString(),  
+            description: appt.request.description,
+            location: appt.request.location,
+            status: appt.status,
+            otherPerson: role === "customer" ? `Technician: ${appt.technician.name}` : `Customer: ${appt.customer.name}`
+        };
+    });
+
+    $('#calendar').fullCalendar({
+        events: events,
+        header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+        },
+        eventClick: function(event) {
+            alert('Description: ' + event.description + '\nLocation: ' + event.location);
+        }
+    });
+
+
+     
+
+
+
+
+
+
+
 });
 
 

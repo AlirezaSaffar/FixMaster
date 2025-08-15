@@ -11,7 +11,7 @@ body {
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-bottom: 70px;
+    margin-bottom: 100px;
     margin-top: 10px;
 
 }
@@ -109,7 +109,7 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }

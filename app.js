@@ -6,6 +6,7 @@ const authroute = require("./routes/authroutes")
 const userroutes = require("./routes/userroutes")
 const customerauthenticate = require("./middleware/customermiddleware")
 const userController = require("./controlers/usercontroler");
+const adminRouter = require('./routes/adminroute');
 
 
 require("dotenv").config()
@@ -21,9 +22,6 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// ===== Middleware =====
-// app.use(express.json({ limit: "10mb" }));
-// app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 app.use(express.static("./public"));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
@@ -82,13 +80,13 @@ app.get("/aboutus", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "aboutus.html"))
 })
 
+app.get("/admin", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "admin.html"))
+})
 
 
-// app.use("/api/auth",authroute)
 
-// app.use("/api/user",userroutes)
-
-
+app.use('/api/admin', adminRouter);
 app.use("/api/auth", express.json({ limit: "10mb" }), express.urlencoded({ extended: true, limit: "10mb" }), authroute);
 app.use("/api/user", express.json({ limit: "10mb" }), express.urlencoded({ extended: true, limit: "10mb" }), userroutes);
 

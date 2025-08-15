@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>پنل مدیریت</title>
+  <link rel="stylesheet" href="/css/admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="shortcut icon" href="/assests/logo.jpg" />
+
+</head>
+<body>
+  <header>
+    <h1>پنل مدیریت خدمات و قیمت‌گذاری</h1>
+  </header>
+
+  <div class="stats">
+    <div class="card">
+      <p>تعداد مشتری‌ها</p>
+      <h2 id="customerCount">0</h2>
+    </div>
+    <div class="card">
+      <p>تعداد تکنسین‌ها</p>
+      <h2 id="technicianCount">0</h2>
+    </div>
+    <div class="card">
+      <p>میانگین قیمت</p>
+      <h2 id="avgPrice">0</h2>
+    </div>
+    <div class="card">
+      <p>بیشترین قیمت</p>
+      <h2 id="maxPrice">0</h2>
+    </div>
+    <div class="card">
+      <p>میانگین امتیاز</p>
+      <h2 id="avgRating">0</h2>
+    </div>
+    <div class="card">
+      <p>کل پرداخت‌ها</p>
+      <h2 id="totalPayments">0</h2>
+    </div>
+    <div class="card">
+      <p>تعداد نظرات</p>
+      <h2 id="totalReviews">0</h2>
+    </div>
+    <div class="card">
+      <p>تعداد ریکوئست‌ها</p>
+      <h2 id="totalRequests">0</h2>
+    </div>
+    <div class="card">
+      <p>تعداد پیشنهادات</p>
+      <h2 id="totalOffers">0</h2>
+    </div>
+    <div class="card">
+      <p>خدمات در حال انجام</p>
+      <h2 id="inProgressServices">0</h2>
+    </div>
+    <div class="card">
+      <p>خدمات تکمیل‌شده</p>
+      <h2 id="completedServices">0</h2>
+    </div>
+    <div class="card">
+      <p> محدودیت قیمت</p>
+      <h2 id="limit">0</h2>
+    </div>
+  </div>
+
+</div>
+
+  <div class="charts">
+    <h3>نمودارها</h3>
+    <div class="chart-container">
+      <canvas id="technicianCustomerChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="serviceChart"></canvas>
+    </div>
+  </div>
+
+  <div class="price-limit">
+    <h3>سقف بیشترین قیمت مجاز</h3>
+    <input type="number" id="priceLimitInput" placeholder="مثلا 500000">
+    <button onclick="savePriceLimit()">ذخیره</button>
+  </div>
+
+  <script src="/js/admin.js"></script>
+  
+</body>
+</html>

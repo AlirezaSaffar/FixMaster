@@ -87,6 +87,10 @@ async function fetchRequests() {
     data.requests.forEach(req => {
       const card = document.createElement('div');
       card.className = 'request-card';
+      var warranty= "not"
+      if(req.warranty){
+        warranty=""
+      }
 
       card.innerHTML = `
         <div class="request-title">${req.service || "No Title"}</div>
@@ -97,6 +101,7 @@ async function fetchRequests() {
             ? req.images.map(img => `<img src="${img}" alt="Request Image">`).join("")
             : `<span style="color:#999;">No images</span>`}
         </div>
+        <p>this request is ${warranty || ""} under warranty </p>
         <div class="offer-container">
           <input type="number" placeholder="Enter your offer" min="1" />
           <label for="timeEstimate">Meeting Time:</label>

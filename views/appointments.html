@@ -8,6 +8,11 @@
 
     <link rel="stylesheet" href="/css/index.css" />
     <link rel="stylesheet" href="/css/appointments.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/assests/logo.jpg" />
+
+
+
    
 </head>
 <body>
@@ -20,7 +25,7 @@
             <ul id="navbar">
                 <li><a href="/dashboard">Dashboard</a></li>      
                 <li style="display:none;" id="req"><a href="/requests">My Requests</a></li>
-                <li><a href="/technicians">Find Technicians</a></li>
+                <li id="findtech"><a href="/technicians">Find Technicians</a></li>
                 <li><a href="/login" id="logout-button">Logout</a></li>
             </ul>
         </nav>
@@ -58,6 +63,9 @@
       </div>
     </div>
   </div>
+  <br>
+  <div id="calendar"></div>
+<br>
   
 
 <footer>
@@ -67,6 +75,8 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="/js/appointments.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.js"></script>
 
 </body>
 </html>

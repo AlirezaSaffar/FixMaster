@@ -52,14 +52,12 @@ nav {
 }
 
 
-/* Container */
 #appointments-list {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* فاصله بین کارت‌ها */
+    gap: 15px; 
 }
 
-/* Card */
 .appointment-card {
     background-color: #ffffff;
     border-radius: 10px;
@@ -76,7 +74,6 @@ nav {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* Card Info */
 .appointment-info h5 {
     margin: 0 0 5px 0;
     font-size: 1.2rem;
@@ -148,28 +145,24 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Style for the appointment card paragraphs */
 .appointment-card p {
-    margin: 0.3rem 0;           /* فاصله بین خطوط */
-    color: #333;                /* رنگ متن خاکستری تیره */
-    font-size: 0.95rem;         /* اندازه فونت کمی کوچکتر */
-    line-height: 1.4;           /* فاصله بین خطوط */
+    margin: 0.3rem 0;           
+    color: #333;                
+    font-size: 0.95rem;        
+    line-height: 1.4;          
 }
 
-/* Highlight the labels like "Date", "Description", "Location" */
 .appointment-card p::before {
     content: attr(data-label) ": ";
     font-weight: 600;
     color: #555;
 }
 
-/* اگر نمیخوای از data-label استفاده کنی، می‌تونی کلاس اضافه کنی */
 .appointment-card .appointment-info p {
     font-weight: 500;
     color: #444;
 }
 
-/* برای حالت status */
 .status-badge {
     padding: 0.2rem 0.5rem;
     border-radius: 0.25rem;
@@ -269,18 +262,127 @@ textarea {
 }
 
 #submit-feedback {
-    background-color: #28a745;  /* سبز */
+    background-color: #28a745;  
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 25px;      
     font-weight: bold;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* سایه زیبا */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); 
 }
 
 #submit-feedback:hover {
     background-color: #218838; 
     transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0,0,0,0.25); /* سایه قوی‌تر هنگام هاور */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.25); 
 }
+
+
+
+
+#calendar {
+    max-width: 90%;
+    margin: 0 auto;
+    background: #f5f5f5;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fc-header-toolbar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.fc-button {
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    padding: 5px 15px;
+    border: none;
+}
+
+.fc-button:hover {
+    background-color: #0056b3;
+}
+
+.fc-event {
+    border-radius: 8px;
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.fc-event.status-completed {
+    background-color: #28a745;
+}
+
+.fc-event.status-pending {
+    background-color: #ffc107;
+}
+
+.fc-event.status-scheduled {
+    background-color: #007bff;
+}
+
+.fc-day-header {
+    background-color: #e3e3e3;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.fc-day {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.fc-day-number {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.fc-time {
+    font-size: 10px;
+    color: #bbb;
+}
+
+.fc-event:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 610px) {
+    header {
+        color: white;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width: 100%;
+        z-index: 1000; 
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        font-size:x-small;
+      }
+      
+
+}
+
+

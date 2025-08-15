@@ -6,6 +6,8 @@
   <title>New Repair Request</title>
   <link rel="stylesheet" href="/css/new-request.css" />
   <link rel="stylesheet" href="/css/index.css" />
+  <link rel="shortcut icon" href="/assests/logo.jpg" />
+
 
   
 </head>
@@ -47,6 +49,15 @@
         <option value="cleaning">Cleaning</option>
         <option value="carpentry">Carpentry</option>
       </select>
+
+
+
+      <label for="warranty">Is this request covered by warranty?</label>
+  <select id="warranty" name="warranty" required>
+    <option value="no">No, it's not under warranty</option>
+    <option value="yes">Yes, it's under warranty</option>
+  </select>
+
 
       <button type="submit">Submit Request</button>
     </form>

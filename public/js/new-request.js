@@ -26,11 +26,13 @@ document.getElementById("repairForm").addEventListener("submit", async function(
     const location = document.getElementById("location").value.trim();
     const service = document.getElementById("service").value;
     const imagesInput = document.getElementById("images").files;
+    const warranty = document.getElementById("warranty").value
 
     const formData = new FormData();
     formData.append("description", description);
     formData.append("location", location);
     formData.append("service", service);
+    formData.append("warranty", warranty);
 
     for (let i = 0; i < imagesInput.length; i++) {
       formData.append("images", imagesInput[i]);
